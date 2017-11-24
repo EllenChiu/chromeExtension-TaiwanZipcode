@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<head>
+  <meta http-equiv="Content-Lanuage" content="zh-tw">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta charset="utf-8">
+  <title>快速查詢郵遞區號</title>
+  <link rel='stylesheet prefetch' href='./src/bootstrap.min.css'>
+
+  <style type="text/css">
+    body {
+      margin: 10px;
+      white-space: nowrap;
+    }
+
+    h1 {
+      font-size: 15px;
+    }
+    .mg{
+      margin-right:10px;
+    }
+    #container {
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+    }
+  </style>
+</head>
+
+<body style="width:500px;height:200px;">
+  <div id="container" style="margin-top:20px">
+    <h5>快速查詢郵遞區號</h5>
+    <div class="row">
+      <form class="form-inline">
+        <div class="form-group mx-sm-3">
+          <div id="twzipcode"></div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <!-- <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script> -->
+  <!-- <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/js/bootstrap.min.js'></script> -->
+  <script src="./src/jquery/jquery.min.js"></script>
+  <script src="./src/jquery-twzipcode/jquery.twzipcode.min.js"></script>
+  <script src="./src/popup.js"></script>
+
+</body>
+<script>
+  $(function() {
+    $('#twzipcode').twzipcode({
+      "css": ["county form-control form-control-sm mg", "district form-control form-control-sm mg", "zipcode form-control form-control-sm mg"],
+
+    });
+
+  })
+</script>
+
+</html>
